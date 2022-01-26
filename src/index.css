@@ -6,9 +6,25 @@
                             'embedded-opentype', and 'svg' */
 }
 
+@font-face {
+  font-family: "HKGrotesk-SemiBold";
+  src: local("HKGrotesk-SemiBold"),
+    url(../fonts/HKGrotesk-SemiBold.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+  font-family: "HKGrotesk-Bold";
+  src: local("HKGrotesk"), url(../fonts/HKGrotesk-Bold.otf) format("opentype");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 body {
   margin: 0;
   background-color: #fff3e0;
+  color: #003d52;
   font-family: HKGrotesk;
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

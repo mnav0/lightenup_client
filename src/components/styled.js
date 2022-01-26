@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import "../index.css";
 
 const Wrapper = styled.div`
+  margin: 1em;
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
     width: 100%;
@@ -25,4 +27,51 @@ const Wrapper = styled.div`
   }
 `;
 
-export { Wrapper };
+const H1 = styled.h1`
+  font-family: HKGrotesk-SemiBold;
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 42px;
+  }
+`;
+
+const H1Light = styled.h1`
+  font-family: HKGrotesk-Regular;
+  font-weight: 100;
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 42px;
+  }
+`;
+
+const Text = styled.p`
+  font-family: HKGrotesk-Regular;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 20px;
+  }
+`;
+
+const H2 = styled.h2`
+  font-family: HKGrotesk-Regular;
+  font-weight: 300;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 22px;
+  }
+`;
+
+const AccentText = styled.span`
+  font-family: HKGrotesk-Bold;
+  font-weight: 700;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 42px;
+  }
+  color: ${props => (props.color ? props.color : null)};
+`;
+
+export { Wrapper, H1, H1Light, Text, H2, AccentText };

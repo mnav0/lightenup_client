@@ -1,11 +1,11 @@
-import { Wrapper } from "./components/styled";
+import { Wrapper, H1 } from "./components/styled";
 import { Link } from "react-router-dom";
 import Button from "./components/button/button";
 
 function ResearchPage() {
   return (
     <Wrapper>
-      <h1>this is the research</h1>
+      <H1 bold>this is the research</H1>
       <div>
         <Link to="/">
           <Button text={"back to home"} back />

@@ -1,11 +1,15 @@
-import { Wrapper } from "./components/styled";
+import { Wrapper, H1, H2 } from "./components/styled";
 import { Link } from "react-router-dom";
 import Button from "./components/button/button";
 
 function HomePage() {
   return (
     <Wrapper>
-      <h1>this is the homepage</h1>
+      <H1>this is the homepage</H1>
+      <H2>
+        We invite you to use holistic light and color therapy to help you
+        materialize desired feelings.
+      </H2>
       <div>
         <Link to="/survey">
           <Button text={"go to survey"} />
