@@ -2,10 +2,13 @@ import React from "react";
 import { StyledButton } from "./button.styles";
 
 const Button = ({ text, back }) => {
-
   return (
     <StyledButton>
-      <p>{back && "< "}{text}{!back && " >"}</p>
+      <p>
+        {back && "< "}
+        {text}
+        {!back && " >"}
+      </p>
     </StyledButton>
   );
 };
