@@ -1,14 +1,15 @@
 import React from "react";
 import { StyledButton } from "./button.styles";
+import { Text } from "../styled";
 
 const Button = ({ text, back }) => {
   return (
     <StyledButton>
-      <p>
+      <Text>
         {back && "< "}
         {text}
         {!back && " >"}
-      </p>
+      </Text>
     </StyledButton>
   );
 };
