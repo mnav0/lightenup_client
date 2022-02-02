@@ -3,9 +3,8 @@ import styled from "styled-components";
 const StyledHeader = styled.header`
   background: transparent;
   color: #003D52;
-  margin: -0.1em;
+  margin: 2em 0em;
+  padding: 1em 0em;
 `;
-
-
 
 export { StyledHeader };
