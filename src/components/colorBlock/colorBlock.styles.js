@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledColorBlock = styled.header`
+const StyledColorBlock = styled.div`
   background: transparent;
   color: #003D52;
   margin: 2em 0em;
