@@ -44,6 +44,15 @@ const H1Light = styled.h1`
   }
 `;
 
+const Label = styled.label`
+  font-family: HKGrotesk-Regular;
+  font-weight: 100;
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 42px;
+  }
+`;
+
 const Text = styled.p`
   font-family: HKGrotesk-Regular;
 
@@ -74,4 +83,4 @@ const AccentText = styled.span`
   color: ${props => (props.color ? props.color : null)};
 `;
 
-export { Wrapper, H1, H1Light, Text, H2, AccentText };
+export { Wrapper, H1, H1Light, Label, Text, H2, AccentText };

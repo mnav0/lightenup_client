@@ -17,7 +17,6 @@ ReactDOM.render(
         <Route path="survey" element={<SurveyPage />} />
       </Routes>
     </BrowserRouter>
-    ,
   </React.StrictMode>,
   document.getElementById("root")
 );

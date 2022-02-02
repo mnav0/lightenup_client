@@ -1,13 +1,17 @@
-import { useEffect, useState } from "react";
-import { Wrapper, H1, AccentText, H1Light, H2 } from "./components/styled";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { Wrapper, H1, AccentText, H1Light, Label, H2 } from "./components/styled";
 import { Link } from "react-router-dom";
 import Button from "./components/button/button";
 import React from "react";
-import queueService from "./services/queueService";
+import queueService, { deleteFromQueue } from "./services/queueService";
+import { animationTypes } from "./constants/animationTypes"
+import SurveyConfirmation from "./components/surveyConfirmation/surveyConfirmation";
 
 function SurveyPage() {
   const [animationQueue, setAnimationQueue] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const { register, handleSubmit, formState: { errors } } = useForm();
   
   const addAnim = typeId => {
     queueService
@@ -15,27 +19,32 @@ function SurveyPage() {
       .then(response => console.log(response));
   };
 
-  useEffect(() => {
+  const deleteAnim = typeId => {
     queueService
-      .getQueue()
-      .then(response => setAnimationQueue(response))
-      .finally(() => setLoading(false));
-  }, []);
+      .deleteFromQueue(typeId)
+      .then(response => console.log(response));
+  };
+
+  const onSubmit = (data) => {
+    addAnim(animationTypes[data.desiredFeeling])
+    setFormSubmitted(true)
+  }
 
   return (
-    !loading ?
       <Wrapper>
-        <H1 bold>this is the survey</H1>
-        <button onClick={() => addAnim(14)}>add healing anim to queue (refresh after)</button>
-        <H2>Animations in queue:</H2>
-        {animationQueue.map((anim, i) => {
-          return <p key={i}>{anim.type}</p>
-          })
-        }
-        <H1Light>
-          Your <AccentText color={"#719680"}>healing</AccentText> manifestation
-        </H1Light>
-        <H2>has been added to the queue and will be displayed soon!</H2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Label htmlFor="curr-feeling">I'm feeling</Label>
+          <input name="curr-feeling"></input>
+          <Label htmlFor="desired-feeling">I wish to manifest:</Label>
+          <select id="desired-feeling" name="desired-feeling" {...register("desiredFeeling", { required: true })}>
+            <option hidden disabled selected value> -- select an option -- </option>
+            {Object.keys(animationTypes).map((a, i) => {
+              return <option value={a} key={i}>{a}</option>
+            })}
+          </select>
+          <Button text={"Visualize"} type="submit"/>
+        </form>
+        <SurveyConfirmation />
         <div>
           <Link to="/">
             <Button text={"back to home"} back />
@@ -47,8 +56,6 @@ function SurveyPage() {
           </Link>
         </div>
       </Wrapper>
-      :
-      <></>
   );
 }
 
