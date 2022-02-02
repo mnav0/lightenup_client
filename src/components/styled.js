@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   margin: 1em;
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
-    width: 100%;
+    width: calc(100%-1em);
   }
 
   // Medium devices (tablets, 768px and up)
@@ -29,6 +29,13 @@ const Wrapper = styled.div`
 
 const H1 = styled.h1`
   font-family: HKGrotesk-SemiBold;
+  margin-top: 0.5em;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    margin-top: 1.2em;
+  }
+
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
     font-size: 42px;
@@ -38,6 +45,8 @@ const H1 = styled.h1`
 const H1Light = styled.h1`
   font-family: HKGrotesk-Regular;
   font-weight: 100;
+  margin-top: 1.2em;
+
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
     font-size: 42px;
