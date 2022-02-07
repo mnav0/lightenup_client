@@ -1,19 +1,21 @@
 const URL = "https://lightenup-heroku.herokuapp.com"
 
-export const getQueue = () =>
+const getQueue = () =>
     fetch(`${URL}/getQueue`)
     .then(response => response.json())
 
-export const addToQueue = (typeId) =>
+const addToQueue = (typeId) =>
     fetch(`${URL}/addToQueue/${typeId}`)
         .then(response => {
             return response.json()
     })
 
-export const deleteFromQueue = (animId) =>
+const deleteFromQueue = (animId) =>
     fetch(`${URL}/deleteFromQueue/${animId}`)
         .then(response => {
             return response.json()
     })
 
-export default { getQueue, addToQueue, deleteFromQueue }
+const queueService = { getQueue, addToQueue, deleteFromQueue }
+
+export default queueService;
