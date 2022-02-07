@@ -3,13 +3,13 @@ import { useForm } from "react-hook-form";
 import { Wrapper, Label } from "./components/styled";
 import Button from "./components/button/button";
 import React from "react";
-import queueService, { deleteFromQueue } from "./services/queueService";
+import queueService from "./services/queueService";
 import { animationTypes } from "./constants/animationTypes"
 import SurveyConfirmation from "./components/surveyConfirmation/surveyConfirmation";
 
 function SurveyPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit } = useForm();
   const [selectedAnim, setSelectedAnim] = useState({});
   
   const addAnim = typeId => {
@@ -18,11 +18,11 @@ function SurveyPage() {
       .then(response => console.log(response));
   };
 
-  const deleteAnim = typeId => {
-    queueService
-      .deleteFromQueue(typeId)
-      .then(response => console.log(response));
-  };
+  // const deleteAnim = typeId => {
+  //   queueService
+  //     .deleteFromQueue(typeId)
+  //     .then(response => console.log(response));
+  // };
 
   const onSubmit = (data) => {
     addAnim(animationTypes[data.desiredFeeling])
