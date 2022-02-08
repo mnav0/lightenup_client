@@ -11,14 +11,14 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
 const Dropdown = ({ register, animationTypes }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState("");
 
   const toggleDropdown = () => {
+    isOpen && document.activeElement.blur();
     setIsOpen(!isOpen);
   };
 
   const getColorCode = animationType => {
-    console.log("this is animationType", animationType);
     return Colors[animationType];
   };
   return (
@@ -30,8 +30,7 @@ const Dropdown = ({ register, animationTypes }) => {
           value={selected}
           color={getColorCode(animationTypes[selected])}
           onClick={() => toggleDropdown()}
-          // onBlur={() => isOpen && toggleDropdown()}
-          {...register("desiredFeeling2", { required: true })}
+          {...register("desiredFeeling", { required: true })}
         />
         <DropdownCaret>
           {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}

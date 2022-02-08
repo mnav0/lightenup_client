@@ -23,8 +23,8 @@ function SurveyPage() {
     queueService.addToQueue(typeId).then(response => console.log(response));
   };
 
-  // Similar to componentDidMount and componentDidUpdate:
-  useEffect(() => {}, [formSubmitted]);
+  // // Similar to componentDidMount and componentDidUpdate:
+  // useEffect(() => {}, [formSubmitted]);
 
   // const deleteAnim = typeId => {
   //   queueService
