@@ -1,44 +1,44 @@
 import styled from "styled-components";
+import { Colors } from "../constants/colors";
 import "../index.css";
 
 const Wrapper = styled.div`
   margin: 1em;
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
-    width: calc(100%-1em);
+    // width: calc(100%-1em);
   }
 
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) {
     width: 90%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
     width: 80%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   // Extra large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) {
     width: 65%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
 const H1 = styled.h1`
   font-family: HKGrotesk-SemiBold;
   margin-top: 0.5em;
+  font-size: 42px;
 
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) {
     margin-top: 1.2em;
-  }
-
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    font-size: 42px;
   }
 `;
 
@@ -46,50 +46,56 @@ const H1Light = styled.h1`
   font-family: HKGrotesk-Regular;
   font-weight: 100;
   margin-top: 1.2em;
-
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    font-size: 42px;
-  }
+  font-size: 42px;
 `;
 
 const Label = styled.label`
   font-family: HKGrotesk-Regular;
   font-weight: 100;
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    font-size: 42px;
-  }
+  margin-top: 1.2em;
+
+  font-size: 42px;
 `;
 
 const Text = styled.p`
   font-family: HKGrotesk-Regular;
-
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    font-size: 20px;
-  }
+  font-size: 20px;
 `;
 
 const H2 = styled.h2`
   font-family: HKGrotesk-Regular;
   font-weight: 300;
-
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    font-size: 22px;
-  }
+  font-size: 22px;
 `;
 
 const AccentText = styled.span`
   font-family: HKGrotesk-Bold;
   font-weight: 700;
+  font-size: 42px;
 
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    font-size: 42px;
-  }
   color: ${props => (props.color ? props.color : null)};
 `;
 
-export { Wrapper, H1, H1Light, Label, Text, H2, AccentText };
+const Input = styled.input`
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: ${Colors["background"]};
+  font-size: 42px;
+
+  &:focus {
+    border: none;
+    background-color: ${Colors["background"]};
+  }
+
+  // copied form H1 styles
+  font-family: HKGrotesk-SemiBold;
+  margin-top: 0.5em;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    margin-top: 1.2em;
+  }
+`;
+
+export { Wrapper, H1, H1Light, Label, Text, H2, AccentText, Input };
