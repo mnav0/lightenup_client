@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Wrapper, Label } from "./components/styled";
+import {
+  Wrapper,
+  Label,
+  Input,
+  Section,
+  ButtonContainer
+} from "./components/styled";
 import Button from "./components/button/button";
 import React from "react";
 import queueService from "./services/queueService";
 import { animationTypes } from "./constants/animationTypes";
 import SurveyConfirmation from "./components/surveyConfirmation/surveyConfirmation";
+import Dropdown from "./components/dropdown/dropdown";
 
 function SurveyPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -16,6 +23,9 @@ function SurveyPage() {
     queueService.addToQueue(typeId).then(response => console.log(response));
   };
 
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {}, [formSubmitted]);
+
   // const deleteAnim = typeId => {
   //   queueService
   //     .deleteFromQueue(typeId)
@@ -23,7 +33,8 @@ function SurveyPage() {
   // };
 
   const onSubmit = data => {
-    addAnim(animationTypes[data.desiredFeeling]);
+    console.log("this is data", data);
+    // addAnim(animationTypes[data.desiredFeeling]);
     const selectedName = data.desiredFeeling;
     const selectedId = animationTypes[data.desiredFeeling];
     const selected = { id: selectedId, name: selectedName };
@@ -35,24 +46,17 @@ function SurveyPage() {
     <Wrapper>
       {!formSubmitted && (
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Label htmlFor="curr-feeling">I'm feeling</Label>
-          <input name="curr-feeling"></input>
-          <Label htmlFor="desired-feeling">I wish to manifest:</Label>
-          <select
-            id="desired-feeling"
-            name="desired-feeling"
-            defaultValue={""}
-            {...register("desiredFeeling", { required: true })}>
-            <option hidden disabled value=""></option>
-            {Object.keys(animationTypes).map((a, i) => {
-              return (
-                <option value={a} key={i}>
-                  {a}
-                </option>
-              );
-            })}
-          </select>
-          <Button text={"Visualize"} type="submit" />
+          <Section>
+            <Label htmlFor="curr-feeling">I'm feeling</Label>
+            <Input name="curr-feeling" placeholder="write..." />
+          </Section>
+          <Section>
+            <Label htmlFor="desired-feeling">I wish to manifest:</Label>
+            <Dropdown register={register} animationTypes={animationTypes} />
+          </Section>
+          <ButtonContainer>
+            <Button text={"Visualize"} type="submit" />
+          </ButtonContainer>
         </form>
       )}
       {formSubmitted && (

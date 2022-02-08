@@ -80,22 +80,44 @@ const Input = styled.input`
   width: 100%;
   border: none;
   border-bottom: 1px solid #000;
-  background-color: ${Colors["background"]};
+  background-color: ${Colors.background};
+  color: ${props => (props.color ? props.color : Colors.text)};
   font-size: 42px;
+  text-align: left;
 
   &:focus {
     border: none;
-    background-color: ${Colors["background"]};
+    border-bottom: 1px solid #000;
+    background-color: ${Colors.background};
   }
 
   // copied form H1 styles
   font-family: HKGrotesk-SemiBold;
   margin-top: 0.5em;
+`;
 
+const Section = styled.div`
+  margin-top: 4em;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: row;
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) {
-    margin-top: 1.2em;
+    flex-direction: row-reverse;
   }
 `;
 
-export { Wrapper, H1, H1Light, Label, Text, H2, AccentText, Input };
+export {
+  Wrapper,
+  H1,
+  H1Light,
+  Label,
+  Text,
+  H2,
+  AccentText,
+  Input,
+  Section,
+  ButtonContainer
+};
