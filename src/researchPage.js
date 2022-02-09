@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "./components/button/button";
 import Header from "./components/header/header";
 import ColorBlock from "./components/colorBlock/colorBlock";
+import { BlockContainer } from "./components/colorBlock/colorBlock.styles";
 
 function ResearchPage() {
   return (
@@ -13,6 +14,7 @@ function ResearchPage() {
           "Learn more about the meaning behind each color palette and our research sources."
         }
       />
+      <BlockContainer>
       <ColorBlock
         emotion={"relax, de-stress, calm, attention"}
         color1={"#D9E5F3"}
@@ -41,13 +43,14 @@ function ResearchPage() {
         color3={"#FCC663"}
         color4={"#70669D"}
       />
-      <ColorBlock
-        emotion={"strength, courage, focus"}
+      <ColorBlock      
+      emotion={"strength, courage, focus"}
         color1={"#FFA5A4"}
         color2={"#D78F8E"}
         color3={"#BABABA"}
         color4={"#565656"}
-      />
+        /> 
+      </BlockContainer>
       <p>Sources</p>
       <p>
         <a
