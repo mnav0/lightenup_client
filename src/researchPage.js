@@ -53,7 +53,7 @@ function ResearchPage() {
       </BlockContainer>
       <p>Sources</p>
       <p>
-        <ExternalLink a href={
+        <ExternalLink href={
             "http://www.arttherapyblog.com/online/color-psychology-psychologica-effects-of-colors/#.YYLxU73MK58."
           }
         >
@@ -63,7 +63,7 @@ function ResearchPage() {
         </ExternalLink>
       </p>
       <p>
-        <ExternalLink a href={
+        <ExternalLink href={
             "https://journals.sagepub.com/doi/full/10.1177/2158244014525423"
           }
         >
@@ -74,7 +74,7 @@ function ResearchPage() {
         </ExternalLink>
       </p>
       <p>
-        <ExternalLink a href= {"https://www.verywellmind.com/color-psychology-2795824"}>
+        <ExternalLink href= {"https://www.verywellmind.com/color-psychology-2795824"}>
           {" "}
           Cherry, Kendra. “Can Color Affect Your Mood and Behavior?” Verywell
           Mind, Verywell Mind, 28 May 2020,
