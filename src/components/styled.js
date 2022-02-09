@@ -75,18 +75,15 @@ const AccentText = styled.span`
 `;
 
 const ExternalLink = styled.a`
-  font-family: HKGrotesk-Italics;
+  font-family: HKGrotesk-Regular;
+  color: #003d52 !important;
   text-decoration: none;
+  font-size: 12px;
 
   &:hover {
     cursor: pointer;
     top: -3px;
     border-bottom: 2px solid #003d52;
-  }
-
-  // Small devices (landscape phones, 576px and up)
-  @media (min-width: 576px) {
-    font-size: 20px;
   }
 `;
 
