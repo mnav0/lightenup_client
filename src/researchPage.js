@@ -23,25 +23,18 @@ function ResearchPage() {
         color4={"#296CA0"}
       />
       <ColorBlock
-        emotion={"healing, pain relief, comfort"}
-        color1={"#E7F9C3"}
-        color2={"#ACDCD1"}
-        color3={"#97CD80"}
-        color4={"#719680"}
-      />
-      <ColorBlock
-        emotion={"joy, energy, positivity"}
-        color1={"#FFFFA2"}
-        color2={"#F6E7A4"}
-        color3={"#FEBB3D"}
-        color4={"#D46C00"}
-      />
-      <ColorBlock
         emotion={"creativity, inspiration"}
         color1={"#FDE8C0"}
         color2={"#CFC8F8"}
         color3={"#FCC663"}
         color4={"#70669D"}
+      />
+      <ColorBlock
+        emotion={"healing, pain relief, comfort"}
+        color1={"#E7F9C3"}
+        color2={"#ACDCD1"}
+        color3={"#97CD80"}
+        color4={"#719680"}
       />
       <ColorBlock      
       emotion={"strength, courage, focus"}
@@ -50,6 +43,13 @@ function ResearchPage() {
         color3={"#BABABA"}
         color4={"#565656"}
         /> 
+      <ColorBlock
+        emotion={"joy, energy, positivity"}
+        color1={"#FFFFA2"}
+        color2={"#F6E7A4"}
+        color3={"#FEBB3D"}
+        color4={"#D46C00"}
+      />
       </BlockContainer>
       <p>Sources</p>
       <p>
@@ -73,13 +73,14 @@ function ResearchPage() {
           2014.” SAGE Journals,
         </ExternalLink>
       </p>
-      <p>
-        <ExternalLink href= {"https://www.verywellmind.com/color-psychology-2795824"}>
+     
+      <ExternalLink href= {"https://www.verywellmind.com/color-psychology-2795824"}>
+       <p>
           {" "}
           Cherry, Kendra. “Can Color Affect Your Mood and Behavior?” Verywell
           Mind, Verywell Mind, 28 May 2020,
-        </ExternalLink>
-      </p>
+        </p>
+      </ExternalLink>
       <div>
         <Link to="/">
           <Button text={"back to home"} back />

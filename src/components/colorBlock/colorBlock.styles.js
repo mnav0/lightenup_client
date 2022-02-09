@@ -8,7 +8,7 @@ const StyledColorBlock = styled.div`
 
   div {
     display: inline-block;
-    width: 80px;
+    width: 70px;
     height: 64px;
   }
 
@@ -19,10 +19,10 @@ const StyledColorBlock = styled.div`
 `;
 
 const BlockContainer = styled.div`
- width: 100%;
- display: flex;
- flex-wrap: wrap;
- justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
  `;
 
 export { StyledColorBlock, BlockContainer };
