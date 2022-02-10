@@ -54,14 +54,12 @@ function ResearchPage() {
       <p>Sources</p>
         <ExternalLink target="_blank" href={ 
             "http://www.arttherapyblog.com/online/color-psychology-psychologica-effects-of-colors/#.YYLxU73MK58."}>
-          {" "}
           <p>
             Says, Deborah, et al. “Color Psychology: The Psychological Effects of
           Colors.” Art Therapy, 24 Dec. 2012,
           </p>
         </ExternalLink>
         <ExternalLink target="_blank" href={"https://journals.sagepub.com/doi/full/10.1177/2158244014525423"}>
-          {" "}
           <p>
           Sevinc Kurt, Kelechi Kingsley Osueke. “The Effects of Color on the
           Moods of College Students - Sevinc Kurt, Kelechi Kingsley Osueke,
@@ -69,7 +67,6 @@ function ResearchPage() {
           </p>
         </ExternalLink>
       <ExternalLink target="_blank" href={"https://www.verywellmind.com/color-psychology-2795824"}>
-          {" "}
           <p>
           Cherry, Kendra. “Can Color Affect Your Mood and Behavior?” Verywell
           Mind, Verywell Mind, 28 May 2020,
