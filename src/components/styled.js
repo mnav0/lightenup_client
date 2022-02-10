@@ -92,4 +92,20 @@ const AccentText = styled.span`
   color: ${props => (props.color ? props.color : null)};
 `;
 
-export { Wrapper, H1, H1Light, Label, Text, H2, AccentText };
+const ExternalLink = styled.a`
+  font-family: HKGrotesk-Italics;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    top: -3px;
+    border-bottom: 2px solid #003d52;
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 20px;
+  }
+`;
+
+export { Wrapper, H1, H1Light, Text, H2, AccentText, ExternalLink };

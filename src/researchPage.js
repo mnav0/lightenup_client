@@ -1,4 +1,4 @@
-import { Wrapper } from "./components/styled";
+import { Wrapper , ExternalLink } from "./components/styled";
 import { Link } from "react-router-dom";
 import Button from "./components/button/button";
 import Header from "./components/header/header";
@@ -53,19 +53,17 @@ function ResearchPage() {
       </BlockContainer>
       <p>Sources</p>
       <p>
-        <a
-          href={
+        <ExternalLink a href={
             "http://www.arttherapyblog.com/online/color-psychology-psychologica-effects-of-colors/#.YYLxU73MK58."
           }
         >
           {" "}
           Says, Deborah, et al. “Color Psychology: The Psychological Effects of
-          Colors.” Art Therapy, 24 Dec. 2012,
-        </a>
+          Colors.” Art Therapy, 24 Dec. 2012, 
+        </ExternalLink>
       </p>
       <p>
-        <a
-          href={
+        <ExternalLink a href={
             "https://journals.sagepub.com/doi/full/10.1177/2158244014525423"
           }
         >
@@ -73,14 +71,14 @@ function ResearchPage() {
           Sevinc Kurt, Kelechi Kingsley Osueke. “The Effects of Color on the
           Moods of College Students - Sevinc Kurt, Kelechi Kingsley Osueke,
           2014.” SAGE Journals,
-        </a>
+        </ExternalLink>
       </p>
       <p>
-        <a href= {"https://www.verywellmind.com/color-psychology-2795824"}>
+        <ExternalLink a href= {"https://www.verywellmind.com/color-psychology-2795824"}>
           {" "}
           Cherry, Kendra. “Can Color Affect Your Mood and Behavior?” Verywell
           Mind, Verywell Mind, 28 May 2020,
-        </a>
+        </ExternalLink>
       </p>
       <div>
         <Link to="/">
