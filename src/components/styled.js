@@ -84,8 +84,6 @@ const ExternalLink = styled.a`
     cursor: pointer;
     top: -3px;
     color: #70669D;
-    // border-bottom: 2px solid #003d52;
-    // boarder-bottom-width:
   }
 `;
 
