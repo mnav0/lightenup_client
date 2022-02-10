@@ -80,10 +80,12 @@ const ExternalLink = styled.a`
   text-decoration: none;
   font-size: 12px;
 
-  &:hover {
+  p:hover {
     cursor: pointer;
     top: -3px;
-    border-bottom: 2px solid #003d52;
+    color: #70669D;
+    // border-bottom: 2px solid #003d52;
+    // boarder-bottom-width:
   }
 `;
 
