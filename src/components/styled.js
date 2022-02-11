@@ -105,4 +105,4 @@ const ExternalLink = styled.a`
   }
 `;
 
-export { Wrapper, H1, H1Light, Text, H2, AccentText, ExternalLink };
+export { Wrapper, H1, H1Light, Label, Text, H2, AccentText, ExternalLink };
