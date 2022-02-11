@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import { Wrapper , ExternalLink } from "./components/styled";
+=======
+import { Wrapper } from "./components/styled";
+>>>>>>> Changes to header and research page.
 import { Link } from "react-router-dom";
 import Button from "./components/button/button";
 import Header from "./components/header/header";
 import ColorBlock from "./components/colorBlock/colorBlock";
+<<<<<<< HEAD
 import { BlockContainer } from "./components/colorBlock/colorBlock.styles";
+=======
+>>>>>>> Changes to header and research page.
 
 function ResearchPage() {
   return (
