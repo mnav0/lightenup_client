@@ -92,4 +92,17 @@ const AccentText = styled.span`
   color: ${props => (props.color ? props.color : null)};
 `;
 
-export { Wrapper, H1, H1Light, Label, Text, H2, AccentText };
+const ExternalLink = styled.a`
+  font-family: HKGrotesk-Regular;
+  color: #003d52 !important;
+  text-decoration: none;
+  font-size: 12px;
+
+  p:hover {
+    cursor: pointer;
+    top: -3px;
+    color: #70669D;
+  }
+`;
+
+export { Wrapper, H1, H1Light, Label, Text, H2, AccentText, ExternalLink };
