@@ -1,19 +1,19 @@
 const animationTypes = {
-    "relax": 4,
-    "stress relief": 4,
-    "calm": 4,
-    "attention": 4,
-    "healing": 14,
-    "pain relief": 14,
-    "comfort": 14,
-    "joy": 24,
-    "energy": 24,
-    "positivity": 24,
-    "creativity": 34,
-    "inspiration": 34,
-    "strength": 44,
-    "courage": 44,
-    "focus": 44
-}
+  "inspiration": 34,
+  "calm": 4,
+  "healing": 14,
+  "positivity": 24,
+  "relax": 4,
+  "comfort": 14,
+  "joy": 24,
+  "courage": 44,
+  "stress relief": 4,
+  "energy": 24,
+  "strength": 44,
+  "attention": 4,
+  "pain relief": 14,
+  "focus": 44,
+  "creativity": 34,
+};
 
-export { animationTypes }
+export { animationTypes };

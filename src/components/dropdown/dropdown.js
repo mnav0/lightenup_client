@@ -1,37 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "../styled";
 import {
   DropDownItem,
   DropdownContainer,
   DropdownCaret
 } from "./dropdown.styles";
-import { Colors } from "../../constants/colors";
+import { getColorCode } from "../../constants/colors";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
-const Dropdown = ({ register, animationTypes }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Dropdown = ({ animationTypes, register, setValue }) => {
   const [selected, setSelected] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(false);
+    if (selected.length != 0) {
+      setValue("desiredFeeling", selected);
+    }
+  }, [selected]);
 
   const toggleDropdown = () => {
-    isOpen && document.activeElement.blur();
     setIsOpen(!isOpen);
   };
 
-  const getColorCode = animationType => {
-    return Colors[animationType];
-  };
   return (
     <div>
       <div>
         <Input
           className="dd-header"
+          name="desiredFeeling"
           placeholder="choose"
           value={selected}
           color={getColorCode(animationTypes[selected])}
           onClick={() => toggleDropdown()}
           {...register("desiredFeeling", { required: true })}
         />
+
         <DropdownCaret>
           {isOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
         </DropdownCaret>
@@ -44,14 +49,15 @@ const Dropdown = ({ register, animationTypes }) => {
             const isSelected = a === selected;
             return (
               <DropDownItem
+                type="button"
                 value={a}
                 key={i}
                 color={getColorCode(animationType)}
                 lastItem={isLast}
-                selected={isSelected}
+                isSelected={isSelected}
                 onClick={() => {
-                  toggleDropdown();
                   setSelected(a);
+                  toggleDropdown();
                 }}>
                 {a}
               </DropDownItem>

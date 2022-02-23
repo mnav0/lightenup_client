@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { Colors } from "../../constants/colors";
+import { Input } from "../styled";
 
 const DropDownItem = styled.button`
   width: 100%;
   font-size: 42px;
   background-color: ${props =>
-    props.selected ? Colors.focus : Colors.background};
+    props.isSelected ? Colors.focus : Colors.background};
   text-align: left;
 
   border-width: 1px;

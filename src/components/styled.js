@@ -91,6 +91,10 @@ const Input = styled.input`
     background-color: ${Colors.background};
   }
 
+  ::placeholder {
+    color: ${Colors.gray};
+  }
+
   // copied form H1 styles
   font-family: HKGrotesk-SemiBold;
   margin-top: 0.5em;
