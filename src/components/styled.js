@@ -112,6 +112,18 @@ const ButtonContainer = styled.div`
     flex-direction: row-reverse;
   }
 `;
+const ExternalLink = styled.a`
+  font-family: HKGrotesk-Regular;
+  color: #003d52 !important;
+  text-decoration: none;
+  font-size: 12px;
+
+  p:hover {
+    cursor: pointer;
+    top: -3px;
+    color: #70669D;
+  }
+`;
 
 export {
   Wrapper,
@@ -123,5 +135,6 @@ export {
   AccentText,
   Input,
   Section,
-  ButtonContainer
+  ButtonContainer,
+  ExternalLink
 };
