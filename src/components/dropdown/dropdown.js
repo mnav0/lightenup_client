@@ -18,7 +18,7 @@ const Dropdown = ({ animationTypes, register, setValue }) => {
     if (selected.length !== 0) {
       setValue("desiredFeeling", selected);
     }
-  }, [selected]);
+  }, [selected, setValue]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
