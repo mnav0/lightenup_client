@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Colors } from "../../constants/colors";
-import { Input } from "../styled";
 
 const DropDownItem = styled.button`
   width: 100%;

@@ -15,7 +15,7 @@ const Dropdown = ({ animationTypes, register, setValue }) => {
 
   useEffect(() => {
     setIsOpen(false);
-    if (selected.length != 0) {
+    if (selected.length !== 0) {
       setValue("desiredFeeling", selected);
     }
   }, [selected]);
