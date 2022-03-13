@@ -4,6 +4,7 @@ import { Wrapper, Label } from "./components/styled";
 import Button from "./components/button/button";
 import React from "react";
 import queueService from "./services/queueService";
+import lightService from "./services/lightService";
 import { animationTypes } from "./constants/animationTypes"
 import SurveyConfirmation from "./components/surveyConfirmation/surveyConfirmation";
 
@@ -18,6 +19,12 @@ function SurveyPage() {
       .then(response => console.log(response));
   };
 
+  const triggerLights = id => {
+    lightService
+      .triggerLight()
+      .then(response => console.log(response));
+  };
+
   // const deleteAnim = typeId => {
   //   queueService
   //     .deleteFromQueue(typeId)
@@ -25,7 +32,8 @@ function SurveyPage() {
   // };
 
   const onSubmit = (data) => {
-    addAnim(animationTypes[data.desiredFeeling])
+    triggerLights()
+    // addAnim(animationTypes[data.desiredFeeling])
     const selectedName = data.desiredFeeling
     const selectedId = animationTypes[data.desiredFeeling]
     const selected = { id: selectedId, name: selectedName }
