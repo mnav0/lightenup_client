@@ -6,9 +6,6 @@ const getQueue = () =>
 
 const addToQueue = (typeId) =>
     fetch(`${URL}/addToQueue/${typeId}`)
-        .then(response => {
-            return response.json()
-    })
 
 const deleteFromQueue = (animId) =>
     fetch(`${URL}/deleteFromQueue/${animId}`)
