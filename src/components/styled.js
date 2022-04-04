@@ -43,14 +43,14 @@ const H1 = styled.h1`
 `;
 
 const H1Light = styled.h1`
-  font-family: HKGrotesk-Regular;
+  font-family: HKGrotesk;
   font-weight: 100;
   margin-top: 1.2em;
   font-size: 42px;
 `;
 
 const Label = styled.label`
-  font-family: HKGrotesk-Regular;
+  font-family: HKGrotesk;
   font-weight: 100;
   margin-top: 1.2em;
 
@@ -58,18 +58,18 @@ const Label = styled.label`
 `;
 
 const Text = styled.p`
-  font-family: HKGrotesk-Regular;
+  font-family: HKGrotesk;
   font-size: 20px;
 `;
 
 const H2 = styled.h2`
-  font-family: HKGrotesk-Regular;
+  font-family: HKGrotesk;
   font-weight: 300;
   font-size: 22px;
 `;
 
 const AccentText = styled.span`
-  font-family: HKGrotesk-Bold;
+  font-family: HKGrotesk;
   font-weight: 700;
   font-size: 42px;
 
@@ -113,7 +113,7 @@ const ButtonContainer = styled.div`
   }
 `;
 const ExternalLink = styled.a`
-  font-family: HKGrotesk-Regular;
+  font-family: HKGrotesk;
   color: #003d52 !important;
   text-decoration: none;
   font-size: 12px;
