@@ -20,7 +20,9 @@ function SurveyPage() {
   const [selectedAnim, setSelectedAnim] = useState({});
 
   const addAnim = typeId => {
-    queueService.addToQueue(typeId).then(response => console.log(response));
+    queueService.addToQueue(typeId)
+      .then(response => console.log(response))
+      .catch(error => (console.log({error})));
   };
 
   const onSubmit = data => {
